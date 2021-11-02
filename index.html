@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Grafika Komputer</title>
+</head>
+<body>
+    <h1>Nama : Husef Sholikhul Ibad</h1>
+    <h1>NIM : 185410110</h1>
+    <canvas id="canvas" width="1010" height="650" style="border:1px solid #000000;"></canvas>
+
+        <script type="text/javascript">
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+        //Membuat Objek Lingkaran 
+        context.beginPath();
+        context.arc(550,100,60,0,2*Math.PI);
+        context.stroke();
+        
+        //Membuat Objek Segitiga
+        context.beginPath(); // mulai menggmabar
+        context.moveTo(300, 300); // titik awal
+        context.lineTo(300, 500); // titik ke-2
+        context.lineTo(500, 500); // titik ke-3
+        context.closePath(); // titik ke-3 ke titik awal
+        context.stroke();
+
+        //Mmebuat Objek Persegi dan memberi warna yg berbeda pada setiap objek
+        context.fillStyle = "rgb(46, 139, 87)"; 
+        context.fillRect(40, 40, 100, 100);
+        context.fillStyle= "rgb(255, 255, 0)"; 
+        context.fillRect(180, 40, 100, 100)
+        context.fillStyle= "rgb(0, 0, 0)"; 
+        context.fillRect(320, 40, 100, 100);
+
+        context.font = "64px Arial";
+        context.strokeText("HUSEF SHOLIKHUL IBAD",10,250);
+
+        </script>
+</body>
+</html>
